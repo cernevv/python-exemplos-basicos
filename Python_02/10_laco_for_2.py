@@ -4,7 +4,7 @@ print(" ")
 # Array
 lojas = ["Santo André", "São Bernardo do Campo", "São Caetano do Sul", "Diadema"]
 
-# Exibind9o lojas
+# Exibindo lojas
 for i, loja in enumerate(lojas, 1):
     print(f"{i} - {loja}")
     print(" ")
