@@ -1,6 +1,6 @@
 import tkinter as tk #Biblioteca para criação de interface
 import math #Biblioteca para realizar operações matemáticas
-from PIL import Image, ImageTk #Manipula imagens
+from PIL import Image, ImageTk # type: ignore #Manipula imagens
 import os #Arquivos de sistema
 import sys #Variáveis de sistema
 
