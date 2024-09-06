@@ -36,6 +36,10 @@ class Calculadora:
         icon_path = resource_path("calc.ico") # Obtém o caminho do ícone
         self.janela.iconbitmap(icon_path) # Define o ícone da janela
 
+        # Frae para o display
+        self.frame_display = ttk.Frame(self.janela) # Cria um frame para o display
+        self.frame_display.pack(fill="both", expand=True) # Adiciona o frame ao layout da janela
+
         # Display para os cálculos
         self.display = ttk.Label(
             self.frame_display,
@@ -99,9 +103,11 @@ class Calculadora:
         # Label "Escolher tema:"
         self.label_tema = ttk.Label(self.frame_tema, text="Escolher tema:", font=('Roboto', 12))
         self.label_tema.pack(side='top', pady=(0, 5))
+        self.label_tema = ttk.Label(self.frame_tema, text="Laura Cernev", font=('Roboto', 12))
+        self.label_tema.pack(side='top', pady=(0, 5))
 
         # Seletor de temas (ComboBox)
-        self.temas = ['darkly', 'cosmo', 'flatly', 'journal', 'litera', 'lumen', 'minty', 'pulse', 'sadstone', 'united', 'yeti', 'morph', 'simplex', 'cerculean']
+        self.temas = ['darkly', 'cosmo', 'flatly', 'journal', 'litera', 'lumen', 'minty', 'pulse', 'sandstone', 'united', 'yeti', 'morph', 'simplex', 'cerculean']
         self.seletor_tema = ttk.Combobox(self.frame_tema, values=self.temas, state='readonly')
         self.seletor_tema.set('darkly') # Define o tema padrão
         self.seletor_tema.pack(side='top', fill='x')
