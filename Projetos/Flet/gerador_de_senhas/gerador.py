@@ -29,7 +29,7 @@ def main(page: ft.Page):
             senha_output.value= "Selecione ao menos um tipo de caractere."
         page.update()
 
-#Dunção para copiar a senha gerada para a área de transferência
+#Função para copiar a senha gerada para a área de transferência
     def copiar_senha(e):
         page.set_clipboard(senha_output.value)
         snack = ft. SnackBar(ft.Text("Senha copiada para a área de transferência!"))
